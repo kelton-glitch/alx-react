@@ -15,14 +15,14 @@ module.exports = {
     hints: false,
     maxEntrypointSize: 1000000,
   },
-  plugins: [new CleanWebpackPlugin(), new HtmlWebpackPlugin()],
+  plugins: [ new CleanWebpackPlugin(), new HtmlWebpackPlugin() ],
   optimization: {
     splitChunks: {
       chunks: 'all',
     },
   },
   devServer: {
-    contentBase: path.join(__dirname, 'public'),
+    contentBase: path.join(__dirname, './public'),
     compress: true,
     port: 8564,
   },
@@ -31,16 +31,17 @@ module.exports = {
     path: path.resolve(__dirname, 'public'),
   },
   module: {
-    rules: [{
+    rules: [
+      {
         test: /\.css$/i,
-        use: ['style-loader', 'css-loader'],
+        use: ["style-loader", "css-loader"],
       },
       {
         test: /\.(gif|png|jpe?g|svg)$/i,
         use: [
-          'file-loader',
+          "file-loader",
           {
-            loader: 'image-webpack-loader',
+            loader: "image-webpack-loader",
             options: {
               bypassOnDebug: true,
               disable: true,
