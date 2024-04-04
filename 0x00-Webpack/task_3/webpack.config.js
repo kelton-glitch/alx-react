@@ -6,9 +6,9 @@ module.exports = {
   mode: 'development',
   devtool: 'inline-source-map',
   entry: {
-    header: '.module/header/header.js',
-    body: '.module/body/body.js',
-    footer: '.module/footer/footer.js',
+    header: './modules/header/header.js',
+    body: './modules/body/body.js',
+    footer: './modules/footer/footer.js',
   },
   performance: {
     maxAssetSize: 1000000,
