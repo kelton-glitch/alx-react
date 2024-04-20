@@ -1,7 +1,11 @@
 import { getFooterCopy, getFullYear, getLatestNotification } from './utils';
+import { StyleSheetTestUtils } from 'aphrodite';
 
 describe("Utils functions", () => {
-  
+  beforeEach(() => {
+    StyleSheetTestUtils.suppressStyleInjection();
+  });
+
   test("getFullYear returns the correct year", () => {
     expect(getFullYear()).toEqual(2024);
   });
